@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.lefties.CustomerHomeActivity">
+
+        <LinearLayout
+            android:id="@+id/layoutTopBtns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:minHeight="80dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/cardCurrentOrder"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_constraintBottom_toTopOf="@id/cardCurrentOrder">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnEditCustomerAccount"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/light"
+                    android:text="Edit Account"
+                    android:textColor="@color/salmon" />
+
+                <Button
+                    android:id="@+id/btnCusLogout"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/light"
+                    android:text="Log out"
+                    android:textColor="@color/salmon" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnGoToCart"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/salmon"
+                android:text="Order History"
+                android:textColor="@color/light" />
+
+            <Button
+                android:id="@+id/homeBtnGoToCart"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/gold_darker"
+                android:text="@string/labelGoToCart"
+                android:textColor="@color/light" />
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardCurrentOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="#8E0144"
+            android:backgroundTint="@color/maroon"
+            android:orientation="vertical"
+            android:padding="12dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLogoAndSearch"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutTopBtns"
+            tools:layout_constraintBottom_toTopOf="@id/linearLogoAndSearch"
+            tools:layout_constraintTop_toBottomOf="@id/layoutTopBtns">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:orientation="horizontal"
+                    android:padding="0dp"
+                    android:textAlignment="gravity">
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="4dp"
+                        android:text="(Reminder) Current Order Details"
+                        android:textColor="@color/light" />
+
+                    <Button
+                        android:id="@+id/btnReminderClose"
+                        android:layout_width="8dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/black"
+                        android:text="X"
+                        android:textColor="@color/light" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/IncomingDelivery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/IncomingDelivery"
+                        android:textColor="#F8B444"
+                        android:textSize="24dp"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/From"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="@string/From"
+                            android:textColor="@color/light_gray" />
+
+                        <TextView
+                            android:id="@+id/FromD"
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="16dp"
+                            android:layout_weight="1"
+                            android:text="@string/FromD"
+                            android:textColor="#DAD0D0"
+                            app:layout_constraintEnd_toEndOf="parent" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/At"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="@string/At"
+                            android:textColor="@color/light_gray" />
+
+                        <TextView
+                            android:id="@+id/AtD"
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="16dp"
+                            android:layout_weight="1"
+                            android:text="@string/AtD"
+                            android:textColor="#E4DDDD"
+                            app:layout_constraintEnd_toEndOf="parent" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="32dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/To"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="@string/To"
+                            android:textColor="@color/light_gray" />
+
+                        <TextView
+                            android:id="@+id/ToD"
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="16dp"
+                            android:layout_weight="1"
+                            android:text="@string/ToD"
+                            android:textColor="#EAE3E3"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btnViewOrderDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/light"
+                        android:minWidth="200dp"
+                        android:text="View order details"
+                        android:textColor="@color/salmon"
+                        tools:backgroundTint="@color/light" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/linearLogoAndSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardCurrentOrder">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/logo_horizontal_marooon" />
+
+            <Spinner
+                android:id="@+id/spinner3"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:layout_margin="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/light_gray"
+                android:contentDescription="@string/labelSearchCity"
+                android:entries="@array/cities"
+                android:prompt="@string/labelSearchCity"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/restoTypeScroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            app:layout_constraintStart_toEndOf="@id/linearLogoAndSearch"
+            app:layout_constraintTop_toBottomOf="@id/linearLogoAndSearch">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/All"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_margin="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:background="#FBF6F6"
+                    android:gravity="center"
+                    android:minWidth="48dp"
+                    android:text="@string/All"
+                    android:textColor="#8E0144"
+                    tools:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/Featured"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_margin="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:background="#FAF6F6"
+                    android:gravity="center"
+                    android:minWidth="48dp"
+                    android:text="@string/Featured"
+                    android:textColor="#8E0144"
+                    tools:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/typeMexican"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_margin="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:background="#FAF6F6"
+                    android:gravity="center"
+                    android:minWidth="24dp"
+                    android:text="Mexican"
+                    android:textColor="#8E0144"
+                    tools:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/typeChinese"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_margin="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:background="#FAF6F6"
+                    android:gravity="center"
+                    android:minWidth="24dp"
+                    android:text="Chinese"
+                    android:textColor="#8E0144"
+                    tools:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/Pastries"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_margin="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:minWidth="24dp"
+                    android:text="@string/Pastries"
+                    android:textColor="#8E0144"
+                    tools:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/Chicken"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_margin="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:background="#FAF9F9"
+                    android:gravity="center"
+                    android:minWidth="24dp"
+                    android:text="@string/Chicken"
+                    android:textColor="#8E0144"
+                    tools:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/Vegetarian"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_margin="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:background="#FAF6F6"
+                    android:gravity="center"
+                    android:minWidth="24dp"
+                    android:text="@string/Vegetarian"
+                    android:textColor="#8E0144"
+                    tools:layout_weight="1" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/customerRestaurantRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/restoTypeScroll" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

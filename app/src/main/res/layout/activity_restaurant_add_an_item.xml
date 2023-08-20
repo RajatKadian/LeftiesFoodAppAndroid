@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutAddAnItem"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="false"
+    android:padding="16dp"
+    android:textAlignment="center">
+
+    <TextView
+        android:id="@+id/itemFoodName2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center|left"
+        android:text="Add an item"
+        android:textColor="@color/maroon"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnAddInventory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="72dp"
+        android:backgroundTint="@color/salmon"
+        android:letterSpacing="0.12"
+        android:minHeight="48dip"
+        android:text="Add item"
+        android:textColor="@color/light"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Item name"
+        android:inputType="textPersonName"
+        android:outlineProvider="background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemFoodName2" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editName">
+
+        <EditText
+            android:id="@+id/editSalePrice"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="50"
+            android:ems="10"
+            android:hint="Sale Price"
+            android:inputType="numberDecimal"
+            android:outlineProvider="background" />
+
+        <EditText
+            android:id="@+id/editRegularPrice"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="50"
+            android:ems="10"
+            android:hint="Regular price"
+            android:inputType="numberDecimal"
+            android:outlineProvider="background" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout8"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginTop="12dp"
+        android:layout_weight="50"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+        <EditText
+            android:id="@+id/editStocks"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="50"
+            android:ems="10"
+            android:hint="Stocks"
+            android:inputType="number"
+            android:maxWidth="64dp"
+            android:outlineProvider="background" />
+
+        <EditText
+            android:id="@+id/editExpiryDate"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="50"
+            android:ems="10"
+            android:hint="Date time"
+            android:inputType="datetime"
+            android:outlineProvider="background"
+            android:visibility="gone"
+            tools:hint="Date Time" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnHolder"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardImgHolder"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_margin="12dp"
+            android:background="@drawable/food_placeholder"
+            android:minHeight="90dp"
+            app:cardCornerRadius="150dp"
+            tools:minHeight="80dp">
+
+            <ImageView
+                android:id="@+id/imgFood"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gold"
+                android:scaleType="centerCrop"
+                android:src="@drawable/food_placeholder" />
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnUpload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:backgroundTint="@color/maroon"
+                android:letterSpacing="0.12"
+                android:minHeight="48dip"
+                android:text="Upload an image"
+                android:textColor="@color/light"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="pasta-seafood.jpg"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

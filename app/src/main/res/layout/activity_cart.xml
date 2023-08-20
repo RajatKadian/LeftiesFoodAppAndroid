@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".CartActivity">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="208dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="203dp"
+            android:backgroundTint="#FFFFFF"
+            android:text="@string/btnBack"
+            android:textAlignment="textStart"
+            android:textColor="#EF6E6C"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
+            android:layout_width="358dp"
+            android:layout_height="61dp"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/rounded_edittext"
+            app:checkedChip="@id/chipDelivery"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnBack">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipDelivery"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#F8B444"
+                android:checked="true"
+                android:text="@string/chipDelivery"
+                android:textAlignment="center"
+                android:textColor="#8E0144"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:chipBackgroundColor="#00000000" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipPickup"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:text="@string/chipPickup"
+                android:textAlignment="center"
+                android:textColor="#8E0144"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:chipBackgroundColor="#001C1C1C" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <TextView
+            android:id="@+id/txtAddress"
+            android:layout_width="359dp"
+            android:layout_height="107dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="#8E0144"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chipGroup"
+            tools:background="@drawable/rounded_edittext" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cartRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="240dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtAddress"
+            tools:layout_constraintBottom_toTopOf="@id/linearLayout2" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/btnOrderMore"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cartRecycler"
+            tools:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/txtTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="51dp"
+                android:layout_marginStart="36dp"
+                android:text="@string/txtTotal"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/txtAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginBottom="6dp"
+                android:textSize="40sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnPlaceOrder"
+            android:layout_width="331dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="1dp"
+            android:backgroundTint="#EF6E6C"
+            android:text="@string/btnPlaceOrder"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/btnOrderMore"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="TextContrastCheck" />
+
+        <Button
+            android:id="@+id/btnOrderMore"
+            android:layout_width="329dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="41dp"
+            android:layout_marginEnd="41dp"
+            android:layout_marginBottom="31dp"
+            android:backgroundTint="#FDFFFFFF"
+            android:text="@string/btnOrderMore"
+            android:textColor="#EF6E6C"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="TextContrastCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>
+

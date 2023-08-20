@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#2F2F37"
+        android:minHeight="1200dip"
+        android:padding="12dp"
+        tools:context=".RestaurantHomeActivity">
+
+        <LinearLayout
+            android:id="@+id/navBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/editAccnBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:text="Edit Account"
+                android:textColor="@color/loginBtn" />
+
+            <Button
+                android:id="@+id/logOutBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:text="Log out"
+                android:textColor="@color/loginBtn" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutLogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="160dp"
+                android:layout_height="110dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="80dp"
+                app:srcCompat="@drawable/logoimg" />
+
+            <TextView
+                android:id="@+id/txtRestoHomeWelcome"
+                android:layout_width="160dp"
+                android:layout_height="110dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginEnd="36dp"
+                android:fontFamily="@font/mulish"
+                android:gravity="center|left"
+                android:text="Hi Manager! Welcome to Restaurant Name’s Dashboard"
+                android:textColor="#fff"
+                app:flow_wrapMode="chain" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/restoHomeHolderBtns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/btnAddItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="48dp"
+                android:backgroundTint="@color/salmon"
+                android:letterSpacing="0.12"
+                android:minHeight="48dip"
+                android:text="@string/labelAddFoodItem"
+                android:textColor="@color/light"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/btnOrderHistoryRest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="48dp"
+                android:layout_marginBottom="2dp"
+                android:backgroundTint="@color/maroon"
+                android:letterSpacing="0.12"
+                android:minHeight="48dip"
+                android:text="@string/labelYourOrders"
+                android:textColor="@color/light"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/customerRestaurantRecycler"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginEnd="1dp"
+            android:minHeight="600dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/restoHomeHolderBtns" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

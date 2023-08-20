@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="8dp"
+    android:background="@color/white"
+    android:minWidth="240dp"
+    android:minHeight="240dp"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/img_food"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:srcCompat="@drawable/food_placeholder" />-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rowAdminBtns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/itemBtnDelete"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:height="12dp"
+            android:background="@color/white"
+            android:elegantTextHeight="true"
+            android:minHeight="48dp"
+            android:text="DELETE"
+            android:textColor="@color/maroon"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/itemBtnEdit"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:height="12dp"
+            android:background="@color/white"
+            android:elegantTextHeight="true"
+            android:text="Edit"
+            android:textColor="#D32F2F"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0px"
+        android:translationZ="2dp"
+        tools:accessibilityLiveRegion="assertive">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="@color/salmon"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp"
+            android:minHeight="20dp"
+            android:padding="4dp"
+            android:text="00:02:44"
+            android:textColor="#3E2723"
+            android:textSize="12sp"
+            android:translationZ="10dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardImgHolder"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/food_placeholder"
+            android:minHeight="120dp"
+            android:translationZ="-1dp"
+            app:cardCornerRadius="150dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:minHeight="120dp">
+
+            <ImageView
+                android:id="@+id/imgFood"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gold"
+                android:scaleType="centerCrop"
+                android:src="@drawable/food_placeholder" />
+
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/itemRestaurantName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/labelRestoPlaceholder" />
+
+        <TextView
+            android:id="@+id/itemFoodName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Seafood Pasta"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="12dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/itemDiscountedPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12dp"
+                android:gravity="center"
+                android:text="$22.90"
+                android:textAlignment="gravity"
+                android:textColor="@color/gold_darker"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/itemRegularPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="$33.60"
+                android:textAlignment="gravity"
+                android:textColor="@color/mid_gray"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/labelDiscontinuationTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Discontinuation time"
+            android:textColor="@color/mid_gray"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/textDiscontinuationDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8sp"
+                android:gravity="center"
+                android:text="May 09 2023"
+                android:textAlignment="gravity"
+                android:textColor="@color/maroon"
+                android:visibility="gone"
+                tools:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/textDiscontinuationTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="11:59pm"
+                android:textAlignment="gravity"
+                android:textColor="@color/salmon"
+                android:visibility="gone"
+                tools:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/itemBtnGoToRestaurant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/maroon"
+        android:text="@string/btnGoToRestaurant"
+        android:textColor="@color/light" />
+
+    <Button
+        android:id="@+id/btnPlaceOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/maroon"
+        android:text="@string/btnAddToCart"
+        android:textColor="@color/light" />
+
+</LinearLayout>

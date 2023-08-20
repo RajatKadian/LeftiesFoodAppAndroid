@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/signUp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EF6E6C">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/signUPL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="411dp"
+            android:layout_height="344dp"
+            android:layout_marginTop="-60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/sign_up_sset_one"
+            tools:ignore="ImageContrastCheck"
+            android:contentDescription="@string/signUpTwo" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="191dp"
+            android:layout_marginTop="3dp"
+            android:contentDescription="@string/signUpRes1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/accountPassword"
+            app:srcCompat="@drawable/sign_up_asset_two"
+            tools:ignore="ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/formName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="27dp"
+            android:gravity="center_horizontal"
+            android:text="@string/signUpText"
+            android:textColor="@color/maroon"
+            android:textSize="35sp"
+            app:layout_constraintBottom_toTopOf="@+id/textBrandName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/logoSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="18dp"
+            android:contentDescription="@string/Lefties"
+            app:layout_constraintEnd_toStartOf="@+id/textBrandName"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/formName"
+            app:srcCompat="@drawable/logo_brandmark_maroon" />
+
+        <EditText
+            android:id="@+id/accountName"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/my_spinner_background"
+            android:hint="@string/acnName"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColorHint="#757575"
+            app:layout_constraintBottom_toTopOf="@+id/accontType"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textBrandName"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Spinner
+            android:id="@+id/accontType"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/my_spinner_background"
+            android:contentDescription="@string/accountType"
+            android:entries="@array/accountType"
+            android:minHeight="45dp"
+            android:spinnerMode="dropdown"
+            app:layout_constraintBottom_toTopOf="@+id/restaurantType"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/accountName"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Spinner
+            android:id="@+id/restaurantType"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/my_spinner_background"
+            android:entries="@array/restaurantType"
+            android:minHeight="45dp"
+            android:spinnerMode="dropdown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/accontType"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/accountEmail"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="11dp"
+            android:background="@drawable/my_spinner_background"
+            android:ems="10"
+            android:hint="@string/acnEmail"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textColorHint="#757575"
+            app:layout_constraintBottom_toTopOf="@+id/accountPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/restaurantType"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/accountPassword"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/my_spinner_background"
+            android:ems="10"
+            android:hint="@string/acnPass"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColorHint="#757575"
+            app:layout_constraintBottom_toTopOf="@+id/txtorderStatus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/accountEmail"
+            tools:ignore="TouchTargetSizeCheck"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/txtorderStatus"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="14dp"
+            android:background="@drawable/my_spinner_background"
+            android:hint="@string/acnNumber"
+            android:importantForAutofill="no"
+            android:inputType="none|phone"
+            android:padding="10dp"
+            android:textColorHint="#757575"
+            app:layout_constraintBottom_toTopOf="@+id/accountAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/accountPassword"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/accountAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/my_spinner_background"
+            android:ems="10"
+            android:hint="@string/acnAddress"
+            android:inputType="textMultiLine"
+            android:minHeight="55dp"
+            android:padding="10dp"
+            android:textColorHint="#757575"
+            app:layout_constraintBottom_toTopOf="@+id/accountCity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtorderStatus"
+            android:importantForAutofill="no" />
+
+<!--        <EditText-->
+<!--            android:id="@+id/accountCity"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="45dp"-->
+<!--            android:layout_marginStart="30dp"-->
+<!--            android:layout_marginEnd="30dp"-->
+<!--            android:layout_marginBottom="17dp"-->
+<!--            android:background="@drawable/my_spinner_background"-->
+<!--            android:hint="@string/acnCity"-->
+<!--            android:inputType="text"-->
+<!--            android:padding="10dp"-->
+<!--            android:textColorHint="#757575"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/btnSignUp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/accountAddress"-->
+<!--            tools:ignore="TouchTargetSizeCheck"-->
+<!--            android:importantForAutofill="no" />-->
+        <Spinner
+            android:id="@+id/accountCity"
+
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="30dp"
+
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="17dp"
+            android:background="@drawable/my_spinner_background"
+            android:entries="@array/cities"
+            android:hint="@string/acnCity"
+            android:inputType="text"
+            android:padding="10dp"
+            android:prompt="@string/labelSearchCity"
+            android:spinnerMode="dropdown"
+            android:textColorHint="#757575"
+            app:layout_constraintBottom_toTopOf="@+id/btnSignUp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/accountAddress"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btnSignUp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@color/maroon"
+            android:scrollbars="vertical"
+            android:text="@string/signUpText"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/accountCity"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <TextView
+            android:id="@+id/textBrandName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="@string/Lefties"
+            android:textColor="@color/maroon"
+            android:textSize="35sp"
+            app:layout_constraintBottom_toTopOf="@+id/accountName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/logoSignUp"
+            app:layout_constraintTop_toBottomOf="@+id/formName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

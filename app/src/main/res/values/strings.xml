@@ -1,0 +1,108 @@
+<resources>
+    <string name="app_name">Lefties</string>
+    <string name="userEmail">Email</string>
+    <string name="userpass">Password</string>
+    <string name="loginBtn">Login</string>
+    <string name="backgroundImg">Background Image</string>
+    <string name="checkBoxRest">I manage a restaurant</string>
+    <string name="appName">Lefties</string>
+    <string name="logoImg">logo Image</string>
+
+
+    <string name="btn">Cart</string>
+    <string name="btnBack"><![CDATA[<- BACK TO HOME PAGE]]></string>
+    <string name="btnAddToCart">Add to cart</string>
+    <string name="txtTotal">Total</string>
+    <string name="btnOrderMore">ORDER MORE FOOD</string>
+    <string name="chipDelivery">DELIVERY</string>
+    <string name="chipPickup">PICKUP</string>
+    <string name="imgCart">image</string>
+
+    <string name="Thumbnail"></string>
+    <string name="sidebar"></string>
+    <string name="backHome">Back to Home Page</string>
+    <string name="Delivery">Delivery</string>
+    <string name="Pickup">Pick Up</string>
+    <string name="CustomText1">Delivering to:
+    At:
+    BC,Ca
+    </string>
+    <string-array name="cities">
+        <item>Please select city</item>
+        <item>Vancouver</item>
+        <item>Surrey</item>
+        <item>Burnaby</item>
+    </string-array>
+    <string name="total">total</string>
+    <string name="PlaceOrder">Place Order</string>
+    <string name="btnPlaceOrder">Place order</string>
+    <string name="OrderMore">Order More Food</string>
+    <string name="imageFood"></string>
+    <string name="FoodText"></string>
+    <!--    customer now-->
+    <string name="leftThumb"></string>
+    <string name="IncomingDelivery"> Incoming Delivery</string>
+    <string name="logoImg1"></string>
+    <string name="rest1">RESTAURANTS</string>
+    <string name="Lefties">Lefties</string>
+    <string name="From">From:</string>
+    <string name="FromD"></string>
+    <string name="To">To:</string>
+    <string name="ToD"></string>
+    <string name="At">At:</string>
+    <string name="AtD"></string>
+    <string name="fooditem">Are you looking for food items or restaurants?</string>
+    <string name="All">All</string>
+    <string name="Featured">Indian</string>
+    <string name="Pastries">Pastries</string>
+    <string name="Chicken">Chicken</string>
+    <string name="Vegetarian">Vegetarian</string>
+    <string name="food">Food</string>
+    <string name="imageView20"></string>
+    <string name="imageView21"></string>
+    <string name="imageView22"></string>
+    <string name="imageView23"></string>
+    <string name="textView17">pasta</string>
+    <string name="textView18">pasta</string>
+    <string name="textView19">pasta</string>
+    <string name="textView20">pasta</string>
+    <string name="signUpBtn">Sign Up</string>
+    <string name="signUpScroll">SignUpView</string>
+    <string name="signUpAssetOne">SignUpAssetOne</string>
+    <string name="signUpAssetTwo">SignUpAssetTwo</string>
+    <string name="txtCongratulations">Congratulations!</string>
+    <string name="txtOrderPlaced">Your order is placed</string>
+    <string name="txtMore">Sit back, relax while we get your order ready!!!</string>
+    <string name="txtOrderNumber">Your order number is #00876</string>
+    <string name="btnHome"> BACK TO HOME PAGE</string>
+    <string name="signUpText">Sign up</string>
+    <string name="accountType">Account Type</string>
+    <string name="acnCity">City</string>
+    <string name="acnAddress">Address</string>
+    <string name="acnNumber">Phone Number</string>
+    <string name="acnPass">Password</string>
+    <string name="acnEmail">Email</string>
+    <string name="acnName">Name</string>
+    <string name="signUpRes1">imgOne</string>
+    <string name="signUpTwo">resTwo</string>
+    <string-array name="accountType">
+        <item>Please select account type</item>
+        <item>Customer</item>
+        <item>Restaurant</item>
+    </string-array>
+    <string-array name="restaurantType">
+        <item>Please select restaurant type</item>
+        <item>Indian</item>
+        <item>Chinese</item>
+        <item>Mexican</item>
+    </string-array>
+
+    <string name="labelSearchCity">Search your city</string>
+    <string name="btnGoToRestaurant">Order from restaurant</string>
+    <string name="labelRestoPlaceholder">Good Restaurant</string>
+    <string name="labelGoToCart">Go to cart</string>
+    <string name="labelBackToCustHome"><![CDATA[< Back To All]]></string>
+    <string name="titleYourOrders">Here are your orders</string>
+    <string name="labelYourOrders">Your Orders</string>
+    <string name="labelAddFoodItem">Add Food Item</string>
+</resources>
